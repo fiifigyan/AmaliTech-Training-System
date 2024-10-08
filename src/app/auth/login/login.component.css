@@ -1,0 +1,32 @@
+form{
+    max-width: 30rem;
+    padding: 2rem;
+    background-color: brown;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-radius: 16px;
+    border: 1px solid var(--Gray-300, #D0D5DD);
+    background: transparent;
+    box-shadow: 0px 1px 3px 0px rgba(16, 24, 40, 0.10), 0px 1px 2px 0px rgba(16, 24, 40, 0.06);
+}
+.remember-forgot{
+    display: flex;
+    justify-content: space-between;
+}
+.remember-forgot label{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--Black-300, #333441);
+}
+.remember{
+    display: flex;
+    align-items: center;
+    gap:.5rem;
+}
+a{
+    color: var(--Orange-600, #EC4A0A);
+    font-size: 0.875rem;
+    text-decoration: none;
+    cursor: pointer;
+}

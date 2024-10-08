@@ -1,0 +1,12 @@
+<form [formGroup]="resetPasswordForm" (ngSubmit)="onSubmit()">
+    <app-logo></app-logo>
+    <app-title-paragraph 
+        [title]="'Reset Password'"
+        [content]="'Please enter your email to receive the reset link in your mail.'">
+    </app-title-paragraph>
+
+    <app-form-field label="New password" icon='<i class="fa-solid fa-lock"></i>' controlName="password" [formGroup]="resetPasswordForm" type="email" placeholder="Type your new password"></app-form-field>
+    <app-form-field label="Confirm password" icon='<i class="fa-solid fa-lock"></i>' controlName="password" [formGroup]="resetPasswordForm" type="email" placeholder="confirm your password"></app-form-field>
+    <app-button styleClass="primary" label="Send reset link" type="submit" [disabled]="resetPasswordForm.invalid"></app-button>
+    <app-button styleClass="secondary" icon='<i class="fa-solid fa-arrow-left-long"></i>' label="Back to login" type="button" (click)="onBackToLogin()"></app-button>
+</form>

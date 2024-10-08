@@ -1,0 +1,13 @@
+<div class="form-field" [formGroup]="formGroup">
+    <label [for]="controlName">{{ label }}</label>
+    <div class="input">
+        <span class="icon" [innerHTML]="icon"></span>
+        <input [id]="controlName" [formControlName]="controlName" [type]="type" [placeholder]="placeholder">
+        <span class="eyeIcon" [innerHTML]="eyeIcon"></span>
+    </div>
+    <!-- <div *ngIf="formGroup.get(controlName)?.invalid && formGroup.get(controlName)?.touched">
+      <small *ngIf="formGroup.get(controlName)?.errors?.required">{{ label }} is required</small>
+
+      <small *ngIf="formGroup.get(controlName)?.errors?.minlength">{{ label }} must be at least {{ formGroup.get(controlName)?.errors?.minlength.requiredLength }} characters long</small>
+    </div> -->
+</div>  

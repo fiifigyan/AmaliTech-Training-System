@@ -1,0 +1,22 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <app-logo></app-logo>
+    <app-title-paragraph 
+        [title]="'Login'"
+        [content]="'Please enter your login details below to access your account.'">
+    </app-title-paragraph>
+
+    <app-form-field label="Email/Staff ID" icon='<i class="fa-regular fa-envelope"></i>' controlName="username" [formGroup]="loginForm" type="email" placeholder="Your email or staff ID"></app-form-field>
+
+    <app-form-field label="Password" icon='<i class="fa-solid fa-lock"></i>' controlName="password" [formGroup]="loginForm" type="password" placeholder="Type your password here"></app-form-field>
+    
+    <div class="remember-forgot">
+        <div class="remember">
+            <input type="checkbox" name="checkbox" id="checkbox">
+            <label for="checkbox">Remember me</label>
+        </div>
+        <a href="#" (click)="onForgotPassword($event)">Forgot Password?</a>
+    </div>
+    <app-button styleClass="primary" label="Login" type="submit" [disabled]="loginForm.invalid"></app-button>
+</form>
+  
+  
